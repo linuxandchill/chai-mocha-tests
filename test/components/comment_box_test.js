@@ -22,10 +22,11 @@ describe('CommentBox', ()=>{
 
   describe('entering input', ()=>{
     beforeEach(() =>{
-      component.find('textarea').simulate('change', 'new comment'); 
+      component.find('textarea').simulate('change', 'dummy input'); 
     });
     
     it('shows input in textarea', ()=>{
+      expect(component.find('textarea')).to.have.value('dummy input');
         
     });
 
